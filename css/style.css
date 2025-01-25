@@ -4,6 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
+
 /* -------------------------------------------------- */
 /* Global-Varaibles */
 /* -------------------------------------------------- */
@@ -67,7 +68,7 @@ body {
 	/* background-image: linear-gradient(to right,
 			var(--pink-light),
 			var(--cyan-light)); */
-	background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);
+	/* background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0); */
   	background-size: 40px 40px;
 	background-attachment: fixed;
 	font-size: 16px;
@@ -78,6 +79,7 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	padding: 5vh 15px;
 	font-family: "Poppins";
+	background-color: #0f1a27;
 }
 body.hide-scrolling{
 	overflow-y: hidden;
@@ -104,6 +106,7 @@ a {
 h1,
 h2 {
 	font-weight: 600;
+	color: #d2d6d6;
 }
 
 h3,
@@ -111,8 +114,19 @@ h4,
 h5,
 h6 {
 	font-weight: 500;
+	color: #d2d6d6;
+
+}
+p{
+	color: #d2d6d6;
+	font-weight: 300;
+	font-style: italic;
 }
 
+button,div{
+	color: #d2d6d6 !important;
+
+}
 img {
 	max-width: 100%;
 	vertical-align: middle;
@@ -122,7 +136,7 @@ video{
 	vertical-align: middle;
 }
 video::-webkit-media-controls {
-    display:none !important;
+    /* display:none !important; */
 }
 ul{
 	list-style: none;
@@ -139,6 +153,8 @@ section {
 	border-radius: 45px;
 	backdrop-filter: var(--backdrop-filter-blur);
 	display: none;
+	background-color: #020d14;
+	
 }
 section.active{
 	display: block;
@@ -264,58 +280,6 @@ section.fade-out{
 	animation: bounce 6s ease-in-out infinite;
 	/* border-radius: 12px; */
 }
-/* .bg-circles{
-	position: fixed;
-	top: 0;
-	height: 100%;
-	max-width: 1200px;
-	width: calc(100% - 30px);
-	left: 50%;
-	transform: translateX(-50%);
-}
-.bg-circles div{
-	position: absolute;
-	border-radius: 50%;
-}
-.bg-circles .circle-1{
-	height: 60px;
-	width: 60px;
-	background-color: var(--blue);
-	left: 5%;
-	top: 10%;
-	opacity: 0.5;
-	animation: zoomInOut 8s linear infinite;
-}
-.bg-circles .circle-2{
-	height:90px;
-	width:90px;
-	background-color: var(--main-color);
-	opacity: 0.4;
-	left: 40%;
-	top:70%;
-	animation: bounce 5s ease-in-out infinite;
-}
-.bg-circles .circle-3{
-	height: 80px;
-	width: 80px;
-	background-color: var(--white);
-	top: 1%;
-	right: -35px;
-	opacity: 0.7;
-	animation: zoomInOut 8s linear infinite;
-}
-.bg-circles .circle-4{
-	height: 50px;
-	width: 50px;
-	background-color: #ffc65c;
-	top: 80%;
-	left: -25px;
-	opacity: 1;
-	animation: bounce 8s linear infinite;
-} */
-/* -------------------------------------------------- */
-/* Buttons */
-/* -------------------------------------------------- */
 
 button {
 	user-select: none;
@@ -938,4 +902,11 @@ button {
 	.pp-header h3{
 		font-size: 20px;
 	}
+}
+
+.portfolio-title{
+	font-size: 59px !important;
+}
+.txt-rotate{
+opacity: 0.5;
 }

@@ -23,7 +23,6 @@ document.addEventListener("click",(e) => {
     }
 })
 function togglePortfolioPopup(){
-    debugger
     document.querySelector(".portfolio-popup").classList.toggle("open");
     document.body.classList.toggle("hide-scrolling");
     document.querySelector(".main").classList.toggle("fade-out");
@@ -58,7 +57,7 @@ function portfolioItemDetails(portfolioItem){
 // Active section
 
 function hideSection(){
-    debugger
+    
     document.querySelector("section.active").classList.toggle("fade-out")
 }
 document.addEventListener("click",(e) =>{
