@@ -13,21 +13,6 @@ tabsContainer.addEventListener("click",(e) =>{
     }
 });
 
-// For Portfolio Slider
-// const tabsContainer1 = document.querySelector('.portfolio-tabs');
-// aboutSection = document.querySelector('.portfolio-section');
-
-// tabsContainer1.addEventListener("click",(e) =>{
-//     if(e.target.classList.contains("port-item") && !e.target.classList.contains("active")){
-//         tabsContainer1.querySelector(".active").classList.remove("active");
-//         e.target.classList.add("active");
-        
-//         const target = e.target.getAttribute("data-target");
-//         aboutSection.querySelector(".tab-content.active").classList.remove("active");
-//         aboutSection.querySelector(target).classList.add("active");
-//         console.log("clicked");
-//     }
-// });
 
 // Portfolio scripts
 document.addEventListener("click",(e) => {
@@ -38,6 +23,7 @@ document.addEventListener("click",(e) => {
     }
 })
 function togglePortfolioPopup(){
+    debugger
     document.querySelector(".portfolio-popup").classList.toggle("open");
     document.body.classList.toggle("hide-scrolling");
     document.querySelector(".main").classList.toggle("fade-out");
@@ -52,9 +38,15 @@ document.addEventListener("click",(e) => {
     }
 })
 function portfolioItemDetails(portfolioItem){
-    document.querySelector(".pp-thumbnail img").src = 
-    portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
-    
+    // document.querySelector(".pp-thumbnail img").src = 
+    // portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
+    let ppSrc=portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
+    if(ppSrc.includes('/images')){
+        document.querySelector(".pp-thumbnail img").classList.remove('hide');
+        document.querySelector(".pp-thumbnail img").src = ppSrc;
+    }else{
+        document.querySelector(".pp-thumbnail img").classList.add('hide');
+    }
     document.querySelector(".pp-header h3").innerHTML = 
     portfolioItem.querySelector(".portfolio-item-title").innerHTML;
 
@@ -66,13 +58,13 @@ function portfolioItemDetails(portfolioItem){
 // Active section
 
 function hideSection(){
+    debugger
     document.querySelector("section.active").classList.toggle("fade-out")
 }
 document.addEventListener("click",(e) =>{
     if(e.target.classList.contains("link-item") && e.target.hash !== ""){
         const hash = e.target.hash;
         if (e.target.classList.contains("nav-item")){
-            console.log("nav item");
         }
         else{
             hideSection();
